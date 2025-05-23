@@ -372,12 +372,14 @@ nav a:hover {
     font-weight: 600;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
 }
 
 .join-button:hover {
     background-color: var(--dark-green);
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.3);
 }
 
 /* Sign Up Form Styles */
@@ -388,6 +390,19 @@ nav a:hover {
     background-color: var(--white);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: none;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .signup-form h3 {
@@ -415,7 +430,8 @@ nav a:hover {
     border: 2px solid var(--gray);
     border-radius: 8px;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: var(--white);
 }
 
 #movement-form textarea {
@@ -427,13 +443,64 @@ nav a:hover {
 #movement-form textarea:focus {
     outline: none;
     border-color: var(--dark-green);
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
 }
 
-.popup-note {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: var(--text-gray);
-    font-style: italic;
+#movement-form .submit-btn {
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+#movement-form .submit-btn:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.3);
+}
+
+#movement-form .submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(46, 204, 113, 0.2);
+}
+
+#movement-form .submit-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+#movement-form .submit-btn:hover::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
 }
 
 /* Disclaimer Section */
@@ -800,6 +867,12 @@ footer {
     z-index: 1000;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.popup.active {
+    opacity: 1;
 }
 
 .popup-content {
@@ -811,6 +884,14 @@ footer {
     max-width: 400px;
     width: 90%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popup.active .popup-content {
+    transform: scale(1);
+    opacity: 1;
 }
 
 .close-popup {
@@ -820,32 +901,119 @@ footer {
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--text-gray);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
+.close-popup:hover {
+    transform: rotate(90deg);
+    color: var(--dark-green);
+}
+
+/* Update JavaScript to use the new animation classes */
 .popup h3 {
     color: var(--dark-green);
     margin-bottom: 1rem;
     font-size: 1.8rem;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease 0.1s;
+}
+
+.popup.active h3 {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .popup p {
     color: var(--text-gray);
     font-size: 1.1rem;
     line-height: 1.6;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease 0.2s;
 }
 
-@media (max-width: 768px) {
-    .newsletter h2 {
-        font-size: 2rem;
-    }
-    
-    .newsletter p {
-        font-size: 1rem;
-    }
-    
-    .newsletter-form {
-        padding: 0 1rem;
-    }
+.popup.active p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.popup .popup-note {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease 0.3s;
+}
+
+.popup.active .popup-note {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Icon animations */
+.disclaimer-icon,
+.desktop-icon,
+.newsletter-icon,
+.trash-game-icon {
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popup.active .disclaimer-icon,
+.popup.active .desktop-icon,
+.popup.active .newsletter-icon,
+.popup.active .trash-game-icon {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Button animations */
+.disclaimer-btn,
+.desktop-btn,
+.newsletter-btn,
+.trash-game-btn {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease 0.4s;
+}
+
+.popup.active .disclaimer-btn,
+.popup.active .desktop-btn,
+.popup.active .newsletter-btn,
+.popup.active .trash-game-btn {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Success popup specific animations */
+.success-popup-content {
+    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+    color: var(--white);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.success-icon {
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popup.active .success-icon {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Game tip specific animation */
+.game-tip {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease 0.3s;
+}
+
+.popup.active .game-tip {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* Newsletter Popup Styles */
@@ -915,6 +1083,7 @@ footer {
     pointer-events: auto;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
+    z-index: 1001;
 }
 
 .trash-bin:hover {
@@ -977,6 +1146,7 @@ footer {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: transform 0.2s ease;
     user-select: none;
+    z-index: 1001;
 }
 
 .trash-item:hover {
@@ -991,6 +1161,7 @@ footer {
 .trash-item.dragging {
     opacity: 0.5;
     cursor: grabbing;
+    z-index: 1002;
 }
 
 /* Position trash items randomly */
@@ -1411,5 +1582,75 @@ footer {
     
     .desktop-popup-content h3 {
         font-size: 1.3rem;
+    }
+}
+
+/* Trash Game Popup Styles */
+.trash-game-popup-content {
+    max-width: 500px;
+    text-align: center;
+    padding: 2rem;
+}
+
+.trash-game-icon {
+    font-size: 3rem;
+    color: #2ecc71;
+    margin-bottom: 1rem;
+}
+
+.trash-game-popup-content h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.trash-game-popup-content p {
+    color: #34495e;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.game-tip {
+    background-color: rgba(46, 204, 113, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+.trash-game-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1rem;
+}
+
+.trash-game-btn:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .trash-game-popup-content {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+    
+    .trash-game-icon {
+        font-size: 2.5rem;
+    }
+    
+    .trash-game-popup-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .game-tip {
+        padding: 0.8rem;
+        font-size: 0.9rem;
     }
 } 
