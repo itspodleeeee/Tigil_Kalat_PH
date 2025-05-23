@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tigil Kalat PH - Stop Littering in the Philippines</title>
+    <link rel="icon" type="image/png" href="logo/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Trash Collection Game -->
+    <div class="trash-game">
+        <div class="trash-bin">
+            <i class="fas fa-trash"></i>
+            <span class="bin-label">Throw trash here!</span>
+            <div class="arrow-animation">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+        </div>
+        
+        <!-- Draggable Trash Items -->
+        <div class="trash-items">
+            <div class="trash-item" draggable="true" data-trash="plastic-bottle">
+                <i class="fas fa-wine-bottle"></i>
+            </div>
+            <div class="trash-item" draggable="true" data-trash="paper">
+                <i class="fas fa-newspaper"></i>
+            </div>
+            <div class="trash-item" draggable="true" data-trash="can">
+                <i class="fas fa-beer"></i>
+            </div>
+            <div class="trash-item" draggable="true" data-trash="bag">
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+            <div class="trash-item" draggable="true" data-trash="straw">
+                <i class="fas fa-stroopwafel"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="logo/logo.png" alt="Tigil Kalat PH Logo" class="logo-img">
+            <h1>Tigil Kalat PH</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About the Issue</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#causes">Causes</a></li>
+                <li><a href="#effects">Effects</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Tigil Kalat, Simulan Natin!</h1>
+            <p>Let's fight littering together for a cleaner, greener Philippines.</p>
+            <a href="https://www.philstar.com/headlines/2024/02/23/2335473/denr-philippines-still-third-largest-source-marine-litter" target="_blank" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About the Issue</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Littering in public places remains one of the most visible and persistent environmental problems in the Philippines. Whether in the bustling streets of Metro Manila, along the scenic coastlines of Batangas, or in quiet provincial towns, improperly discarded waste—from food wrappers to plastic bottles—continues to pile up in areas where it doesn't belong.</p>
+                    
+                    <div class="media-container">
+                        <div class="media-item">
+                            <img src="https://files01.pna.gov.ph/source/2024/02/27/manila-bay-clean-up-02262024ybl.jpg" alt="Manila Bay Cleanup Operations" class="media-image">
+                            <div class="media-caption">
+                                <p>Cleanup operations in Manila Bay along Baseco, Tondo. Photo: Philippine News Agency (2024).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="media-item video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Nc3BeO7qrq0" frameborder="0" allowfullscreen></iframe>
+                            <div class="media-caption">
+                                <p>Video by YouTube – Manila Bay cleanup operations showing the ongoing efforts to restore and maintain the bay's cleanliness.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>This issue isn't just about trash—it's about accountability, public health, and our shared responsibility to protect the environment we all live in. Litter can clog drainage systems, leading to flooding in urban areas. It pollutes our oceans and beaches, harming marine life that mistakes plastic for food. It also ruins the natural beauty of our surroundings and sends the message that environmental neglect is acceptable.</p>
+                    
+                    <p>To combat this, the Philippine government enacted Republic Act No. 9003, also known as the Ecological Solid Waste Management Act of 2000. This law mandates proper waste segregation, recycling, and the establishment of materials recovery facilities in every barangay. It also penalizes individuals and establishments caught littering with fines or community service. However, despite these regulations, enforcement remains weak, and public awareness is still low—especially among younger generations.</p>
+                    
+                    <p>That's why initiatives like Tigil Kalat PH are so important. By educating and inspiring Filipinos, especially the youth, to take active roles in reducing litter, we can begin to reverse the damage and build a culture of cleanliness and civic responsibility.</p>
+                    
+                    <p>Littering may seem like a small act, but when millions of people do it, the impact becomes massive. It's time we take this issue seriously—not just through laws, but through everyday choices that reflect respect for our environment, our communities, and future generations.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <i class="fas fa-trash"></i>
+                            <h3>2.7M</h3>
+                            <p>Tons of plastic waste yearly</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-water"></i>
+                            <h3>90%</h3>
+                            <p>Of Manila Bay litter is plastic</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Impact Section -->
+    <section id="media-impact" class="media-impact">
+        <div class="container">
+            <h2>Visual Impact of Littering</h2>
+            <div class="media-grid">
+                <div class="media-card">
+                    <a href="https://www.theguardian.com/world/2021/oct/05/photos-show-manila-bay-mangroves-choking-in-plastic-pollution" target="_blank">
+                        <img src="https://i.guim.co.uk/img/media/793773652a525be7099a25dbfcded46da45f54db/0_377_1121_673/master/1121.jpg?width=620&dpr=1&s=none&crop=none" alt="Plastic Pollution in Mangroves" class="media-image">
+                        <div class="media-caption">
+                            <p>Navotas mangroves buried in plastic waste. Photo: The Guardian (2021).</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="media-card">
+                    <a href="https://www.gettyimages.com/detail/news-photo/children-playing-on-a-beach-filled-with-plastic-wastes-on-news-photo/949631630" target="_blank">
+                        <img src="https://media.gettyimages.com/id/949631630/photo/filipinos-tackle-plastic-pollution-at-manilas-bay.jpg?s=2048x2048&w=gi&k=20&c=0q9XHVw-gGJQiDtEjc2iGlNNsZyy9Sk-gnMN1WTadvI=" alt="Children Playing in Littered Beach" class="media-image">
+                        <div class="media-caption">
+                            <p>Children playing in plastic waste on Manila beach. Photo: Getty Images (2018).</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="about-us">
+        <div class="container">
+            <h2>👥 About Us</h2>
+            <div class="about-us-content">
+                <div class="about-us-text">
+                    <p>Tigil Kalat PH is a youth-led environmental awareness initiative that aims to spark meaningful conversations and collective action against littering in public places across the Philippines. We are a passionate group of student advocates who believe that a cleaner, greener future starts with informed communities and responsible habits.</p>
+                    
+                    <p>Our mission is to educate the Filipino public—especially the youth—about the harmful effects of littering on our ecosystems, urban spaces, and daily lives. Through facts, stories, campaigns, and community-driven content, we hope to inspire a sense of civic pride and environmental responsibility in every barangay, school, and sidewalk.</p>
+                    
+                    <p>💡 From highlighting Republic Act No. 9003 to showcasing real-life efforts and cleanup initiatives in the country, we aim to be a digital platform for both awareness and action.</p>
+                    
+                    <div class="about-us-disclaimer">
+                        <p><strong>Disclaimer:</strong> Tigil Kalat PH is not a real organization. This website was created solely as part of a school project for educational purposes. Any names, logos, and content presented are fictional or adapted for academic use. Still, we hope our message resonates with those who care about our environment as much as we do.</p>
+                    </div>
+                    
+                    <p class="about-us-closing">Let's work together to make "Tigil Kalat" more than just a campaign—it's a mindset. 🌱</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Causes Section -->
+    <section id="causes" class="causes">
+        <div class="container">
+            <h2>Why Does Littering Happen?</h2>
+            <div class="causes-grid">
+                <div class="cause-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Lack of Awareness</h3>
+                    <p>Many people don't understand the impact of their actions</p>
+                </div>
+                <div class="cause-card">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Weak Law Enforcement</h3>
+                    <p>Limited implementation of anti-littering laws</p>
+                </div>
+                <div class="cause-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Poor Civic Responsibility</h3>
+                    <p>Some people don't take ownership of their environment</p>
+                </div>
+                <div class="cause-card">
+                    <i class="fas fa-user-friends"></i>
+                    <h3>Overpopulation</h3>
+                    <p>More people means more waste to manage</p>
+                </div>
+                <div class="cause-card">
+                    <i class="fas fa-trash-alt"></i>
+                    <h3>Not Enough Trash Bins</h3>
+                    <p>Limited access to proper waste disposal facilities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Effects Section -->
+    <section id="effects" class="effects">
+        <div class="container">
+            <h2>Impact of Littering</h2>
+            <div class="effects-grid">
+                <div class="effect-card">
+                    <i class="fas fa-water"></i>
+                    <h3>Flooding</h3>
+                    <p>Clogged drains lead to urban flooding</p>
+                </div>
+                <div class="effect-card">
+                    <i class="fas fa-fish"></i>
+                    <h3>Marine Life</h3>
+                    <p>Ocean pollution harms sea creatures</p>
+                </div>
+                <div class="effect-card">
+                    <i class="fas fa-virus"></i>
+                    <h3>Disease Spread</h3>
+                    <p>Litter attracts pests and diseases</p>
+                </div>
+                <div class="effect-card">
+                    <i class="fas fa-plane"></i>
+                    <h3>Tourism Impact</h3>
+                    <p>Dirty surroundings discourage visitors</p>
+                </div>
+                <div class="effect-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Visual Pollution</h3>
+                    <p>Litter ruins our beautiful landscapes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="get-involved" class="get-involved">
+        <div class="container">
+            <h2>Get Involved</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <i class="fas fa-hands-wash"></i>
+                    <h3>Join Clean-up Drives</h3>
+                    <p>Participate in community clean-up activities</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-recycle"></i>
+                    <h3>Use Reusable Items</h3>
+                    <p>Bring your own water bottle and shopping bags</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Report Violators</h3>
+                    <p>Call authorities when you see littering</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Educate Peers</h3>
+                    <p>Share knowledge about proper waste disposal</p>
+                </div>
+            </div>
+            <button id="join-button" class="join-button">Join the Movement</button>
+            
+            <!-- Sign Up Form (initially hidden) -->
+            <div id="signup-form" class="signup-form" style="display: none;">
+                <h3>Sign Up to Join Our Movement</h3>
+                <p class="form-note">We'll contact you to discuss how you can contribute to our cause.</p>
+                <form id="movement-form">
+                    <div class="form-group">
+                        <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="movement-email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="How would you like to contribute?" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2>📢 Latest Updates</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <a href="https://ecowastecoalition.blogspot.com/2025/01/ecowaste-coalition-highlights.html" target="_blank" class="blog-link">
+                        <div class="blog-image">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEji1pg63JLjKVoQxFz_MPyvgMZkBtarIAyBtGBZSXZPUxpGQAGy98Ps_G-BseCnzr_e0rM5ZRASMAgI2KQJhx_kSXfv557OkvdrqKu01KxS2sl90zCB8tHpcgjs9ioaog5uEKkGPpZJcDTZKeKXgZLPBz2n1ls3rThBbFwOkgrn_ZkjgdCwdLx5/w640-h426/IMG_1494.jpeg" alt="Marine litter reduction">
+                            <div class="image-caption">Image: Marine litter cleanup in progress</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>EcoWaste Coalition Highlights Significant Progress in Marine Litter Reduction</h3>
+                            <p class="blog-date">January 2025</p>
+                            <p>Recent initiatives show promising results in reducing marine litter across Philippine coastlines. Community efforts and policy changes are making a real difference.</p>
+                            <span class="read-more">🔗 Read More</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="blog-card">
+                    <a href="https://pcij.org/2024/05/19/has-the-philippines-created-a-garbage-problem-too-big-to-dig-its-way-out-of" target="_blank" class="blog-link">
+                        <div class="blog-image">
+                            <img src="https://i0.wp.com/pcij.org/wp-content/uploads/2024/05/Brgy.-Kay-anlog.png?w=1014&quality=80&ssl=1" alt="Garbage problem in Philippines">
+                            <div class="image-caption">Image: Urban waste management challenges</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Has the Philippines Created a Garbage Problem Too Big to Dig Its Way Out Of?</h3>
+                            <p class="blog-date">May 2024</p>
+                            <p>Investigative report reveals the scale of the Philippines' waste management crisis and explores potential solutions for a sustainable future.</p>
+                            <span class="read-more">🔗 Read More</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="blog-card">
+                    <a href="https://www.reuters.com/world/asia-pacific/philippine-diving-town-swaps-trash-rice-clean-up-its-beaches-2024-07-03" target="_blank" class="blog-link">
+                        <div class="blog-image">
+                            <img src="https://www.reuters.com/resizer/v2/Z5I6XFFI55K2FKMXSN7SXIIRCY.jpg?auth=2760d5daa44da83c9822b2569928e08bc76f8057950be1abb33c5feaa410a1ca&width=960&quality=80" alt="Trash for rice program">
+                            <div class="image-caption">Image: Community trash-for-rice exchange program</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Philippine Diving Town Swaps Trash for Rice to Clean Up Its Beaches</h3>
+                            <p class="blog-date">July 2024</p>
+                            <p>Innovative program encourages community participation in beach cleanup by exchanging collected trash for rice, creating a win-win solution.</p>
+                            <span class="read-more">🔗 Read More</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="blog-card">
+                    <a href="https://blogs.worldbank.org/en/eastasiapacific/addressing-plastic-pollution-crisis-philippines-new-momentum" target="_blank" class="blog-link">
+                        <div class="blog-image">
+                            <img src="https://blogs.worldbank.org/content/dam/sites/blogs/img/detail/mgr/plastic_waste_philippines_blog.jpg" alt="Plastic pollution crisis">
+                            <div class="image-caption">Image: Plastic waste management initiatives</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Addressing the Plastic Pollution Crisis in the Philippines: New Momentum</h3>
+                            <p class="blog-date">June 2024</p>
+                            <p>World Bank report highlights new initiatives and partnerships tackling plastic pollution in the Philippines, showing promising progress.</p>
+                            <span class="read-more">🔗 Read More</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="blog-card">
+                    <a href="https://www.greenpeace.org/philippines/story/67359/fisherfolk-on-the-frontlines" target="_blank" class="blog-link">
+                        <div class="blog-image">
+                            <img src="https://www.greenpeace.org/static/planet4-philippines-stateless/2024/11/c3267362-gp0stxukq_medium-res-1200px-1024x767.jpg" alt="Fisherfolk collecting plastic">
+                            <div class="image-caption">Image: Fisherfolk collecting plastic waste</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Fisherfolk on the Frontlines: Battling Plastic Pollution</h3>
+                            <p class="blog-date">April 2024</p>
+                            <p>Local fisherfolk communities lead the fight against marine plastic pollution, sharing their stories and innovative solutions.</p>
+                            <span class="read-more">🔗 Read More</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="blog-card">
+                    <a href="https://plasticbank.com/blog/top-5-waste-management-challenges-in-the-philippines-and-how-to-solve-them" target="_blank" class="blog-link">
+                        <div class="blog-image">
+                            <img src="https://assets.plasticbank.com/wp-content/uploads/2023/10/19033611/family-sorting-waste-for-recycling-close-up-2022-01-27-19-04-53-utc.jpg" alt="Waste management solutions">
+                            <div class="image-caption">Image: Waste management infrastructure</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Top 5 Waste Management Challenges in the Philippines and How to Solve Them</h3>
+                            <p class="blog-date">March 2024</p>
+                            <p>Comprehensive analysis of major waste management challenges and practical solutions for a cleaner Philippines.</p>
+                            <span class="read-more">🔗 Read More</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="blog-card">
+                    <a href="https://nosy.agency/blog/tackling-plastic-pollution-in-the-philippines-a-growing-crisis" target="_blank" class="blog-link">
+                        <div class="blog-image">
+                            <img src="https://cdn.sanity.io/images/tmtzllez/production/9f5dcfdb5192945562eec3a6aef8a86783969192-1536x2048.jpg?rect=0,595,1536,857&w=896&h=500&q=95&fit=max&auto=format&dpr=2" alt="Plastic pollution crisis">
+                            <div class="image-caption">Image: Plastic waste impact on environment</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Tackling Plastic Pollution in the Philippines: A Growing Crisis</h3>
+                            <p class="blog-date">February 2024</p>
+                            <p>In-depth look at the growing plastic pollution crisis and the urgent need for comprehensive solutions.</p>
+                            <span class="read-more">🔗 Read More</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="blog-card">
+                    <a href="https://www.gmanetwork.com/news/scitech/science/932956/marine-litter-in-manila-bay-has-decreased-2024-study" target="_blank" class="blog-link">
+                        <div class="blog-image">
+                            <img src="https://images.gmanews.tv/webpics/2022/09/dolomitebeach_2022_09_26_10_11_02.jpg" alt="Manila Bay cleanup">
+                            <div class="image-caption">Image: Manila Bay cleanup progress</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Marine Litter in Manila Bay Has Decreased – 2024 Study</h3>
+                            <p class="blog-date">January 2024</p>
+                            <p>New study shows positive results from ongoing cleanup efforts in Manila Bay, marking significant progress in marine conservation.</p>
+                            <span class="read-more">🔗 Read More</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer Section -->
+    <section class="disclaimer">
+        <div class="container">
+            <p>This website is a school project for educational purposes only. It aims to raise awareness about littering and promote environmental responsibility among youth.</p>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Sign up for Our Newsletter</h2>
+            <p>Stay updated with the latest news and initiatives about environmental protection in the Philippines.</p>
+            <form id="newsletter-form" class="newsletter-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <button type="submit" class="submit-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Popup Message -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <h3>Thank You!</h3>
+            <p>Thanks for your interest in joining our movement. We appreciate your commitment to making a difference!</p>
+            <p class="popup-note">Note: This is a school project, so we won't actually contact you. This form is for demonstration purposes only.</p>
+        </div>
+    </div>
+
+    <!-- Trash Collection Success Popup -->
+    <div id="success-popup" class="popup">
+        <div class="popup-content success-popup-content">
+            <span class="close-popup">&times;</span>
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Thank You!</h3>
+            <p>We hope every human is just like you who throws their trash in the right bin. Together, we can make our world cleaner and greener! 🌱</p>
+        </div>
+    </div>
+
+    <!-- Disclaimer Popup -->
+    <div id="disclaimer-popup" class="popup">
+        <div class="popup-content disclaimer-popup-content">
+            <span class="close-popup">&times;</span>
+            <div class="disclaimer-icon">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <h3>Welcome to Tigil Kalat PH</h3>
+            <p>This website is a school project created by John. All source code was written from scratch without using any templates, as a personal learning experience in web development.</p>
+            <p>The project aims to raise awareness about littering in the Philippines and promote environmental responsibility among youth.</p>
+            <p>All content and media used are properly credited to their respective sources.</p>
+            <button class="disclaimer-btn">I Understand</button>
+        </div>
+    </div>
+
+    <!-- Desktop Optimization Popup -->
+    <div id="desktop-popup" class="popup">
+        <div class="popup-content desktop-popup-content">
+            <span class="close-popup">&times;</span>
+            <div class="desktop-icon">
+                <i class="fas fa-desktop"></i>
+            </div>
+            <h3>Desktop Optimization Notice</h3>
+            <p>This website is optimized for desktop browsers and is intended to be viewed on desktop devices for the best experience.</p>
+            <button class="desktop-btn">I Understand</button>
+        </div>
+    </div>
+
+    <!-- Newsletter Popup -->
+    <div id="newsletter-popup" class="popup">
+        <div class="popup-content newsletter-popup-content">
+            <span class="close-popup">&times;</span>
+            <div class="newsletter-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Thank You for Subscribing!</h3>
+            <p>You've successfully subscribed to our newsletter. Stay tuned for updates about environmental protection in the Philippines.</p>
+            <p class="popup-note">Note: This is a school project, so you won't actually receive any newsletters.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sources</h3>
+                    <ul>
+                        <li><a href="https://www.philstar.com/headlines/2024/02/23/2335473/denr-philippines-still-third-largest-source-marine-litter" target="_blank">Philstar - Philippines still third largest source of marine litter</a></li>
+                        <li><a href="https://www.theguardian.com/world/2021/oct/05/photos-show-manila-bay-mangroves-choking-in-plastic-pollution" target="_blank">The Guardian - Manila Bay mangroves choking in plastic pollution</a></li>
+                        <li><a href="https://www.gettyimages.com/detail/news-photo/children-playing-on-a-beach-filled-with-plastic-wastes-on-news-photo/949631630" target="_blank">Getty Images - Children playing on plastic waste-covered beach</a></li>
+                        <li><a href="https://files01.pna.gov.ph/source/2024/02/27/manila-bay-clean-up-02262024ybl.jpg" target="_blank">Philippine News Agency - Manila Bay cleanup operations</a></li>
+                        <li><a href="https://ecowastecoalition.blogspot.com/2025/01/ecowaste-coalition-highlights.html" target="_blank">EcoWaste Coalition - Marine litter reduction progress</a></li>
+                        <li><a href="https://pcij.org/2024/05/19/has-the-philippines-created-a-garbage-problem-too-big-to-dig-its-way-out-of" target="_blank">PCIJ - Philippines garbage problem investigation</a></li>
+                        <li><a href="https://www.reuters.com/world/asia-pacific/philippine-diving-town-swaps-trash-rice-clean-up-its-beaches-2024-07-03" target="_blank">Reuters - Philippine diving town trash-for-rice program</a></li>
+                        <li><a href="https://blogs.worldbank.org/en/eastasiapacific/addressing-plastic-pollution-crisis-philippines-new-momentum" target="_blank">World Bank - Plastic pollution crisis in the Philippines</a></li>
+                        <li><a href="https://www.greenpeace.org/philippines/story/67359/fisherfolk-on-the-frontlines" target="_blank">Greenpeace - Fisherfolk on the frontlines</a></li>
+                        <li><a href="https://plasticbank.com/blog/top-5-waste-management-challenges-in-the-philippines-and-how-to-solve-them" target="_blank">Plastic Bank - Waste management challenges in the Philippines</a></li>
+                        <li><a href="https://nosy.agency/blog/tackling-plastic-pollution-in-the-philippines-a-growing-crisis" target="_blank">Nosy Agency - Tackling plastic pollution in the Philippines</a></li>
+                        <li><a href="https://www.gmanetwork.com/news/scitech/science/932956/marine-litter-in-manila-bay-has-decreased-2024-study" target="_blank">GMA News - Manila Bay marine litter decrease study</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Tigil Kalat PH | School Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Join Movement Button and Form Functionality
+        document.getElementById('join-button').addEventListener('click', function() {
+            const signupForm = document.getElementById('signup-form');
+            if (signupForm.style.display === 'none') {
+                signupForm.style.display = 'block';
+                signupForm.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                signupForm.style.display = 'none';
+            }
+        });
+
+        // Movement Form Submission
+        document.getElementById('movement-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show popup
+            const popup = document.getElementById('popup');
+            popup.style.display = 'flex';
+            
+            // Reset form and hide it
+            this.reset();
+            document.getElementById('signup-form').style.display = 'none';
+        });
+
+        // Close popup when clicking the close button
+        document.querySelector('.close-popup').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'none';
+        });
+
+        // Close popup when clicking outside
+        document.getElementById('popup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        });
+
+        // Trash Game Functionality
+        const trashItems = document.querySelectorAll('.trash-item');
+        const trashBin = document.querySelector('.trash-bin');
+        const successPopup = document.getElementById('success-popup');
+        let draggedItem = null;
+
+        trashItems.forEach(item => {
+            item.addEventListener('dragstart', function(e) {
+                draggedItem = this;
+                this.classList.add('dragging');
+                e.dataTransfer.setData('text/plain', this.dataset.trash);
+            });
+
+            item.addEventListener('dragend', function() {
+                this.classList.remove('dragging');
+            });
+        });
+
+        trashBin.addEventListener('dragover', function(e) {
+            e.preventDefault();
+        });
+
+        trashBin.addEventListener('drop', function(e) {
+            e.preventDefault();
+            if (draggedItem) {
+                // Animate the trash item to the bin
+                const rect = trashBin.getBoundingClientRect();
+                const itemRect = draggedItem.getBoundingClientRect();
+                
+                draggedItem.style.transition = 'all 0.5s ease';
+                draggedItem.style.transform = `translate(${rect.left - itemRect.left}px, ${rect.top - itemRect.top}px) scale(0.1)`;
+                draggedItem.style.opacity = '0';
+
+                // Remove the item after animation
+                setTimeout(() => {
+                    draggedItem.remove();
+                    // Check if all trash is collected
+                    if (document.querySelectorAll('.trash-item').length === 0) {
+                        successPopup.style.display = 'flex';
+                    }
+                }, 500);
+            }
+        });
+
+        // Close success popup
+        successPopup.querySelector('.close-popup').addEventListener('click', function() {
+            successPopup.style.display = 'none';
+        });
+
+        // Close success popup when clicking outside
+        successPopup.addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        });
+
+        // Randomize trash positions on page load
+        function randomizeTrashPositions() {
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const trashBin = document.querySelector('.trash-bin');
+            const binRect = trashBin.getBoundingClientRect();
+            
+            trashItems.forEach(item => {
+                // Calculate safe boundaries
+                const maxX = window.innerWidth - 100; // Keep away from right edge
+                const maxY = window.innerHeight - 100; // Keep away from bottom edge
+                const minY = headerHeight + 50; // Keep below header
+                
+                // Generate random position within safe boundaries
+                let randomX = Math.random() * (maxX - 100) + 50; // Keep away from left edge
+                let randomY = Math.random() * (maxY - minY) + minY;
+                
+                // Ensure trash doesn't overlap with the bin
+                const binBuffer = 100; // Buffer zone around the bin
+                if (randomX > binRect.left - binBuffer && 
+                    randomX < binRect.right + binBuffer && 
+                    randomY > binRect.top - binBuffer && 
+                    randomY < binRect.bottom + binBuffer) {
+                    // If too close to bin, adjust position
+                    if (randomX < binRect.left) {
+                        randomX = binRect.left - binBuffer;
+                    } else {
+                        randomX = binRect.right + binBuffer;
+                    }
+                }
+                
+                // Apply the position
+                item.style.left = `${randomX}px`;
+                item.style.top = `${randomY}px`;
+            });
+        }
+
+        // Call randomize function when page loads
+        window.addEventListener('load', randomizeTrashPositions);
+        
+        // Also randomize positions when window is resized
+        window.addEventListener('resize', randomizeTrashPositions);
+
+        // Show disclaimer popup when page loads
+        window.addEventListener('load', function() {
+            const disclaimerPopup = document.getElementById('disclaimer-popup');
+            disclaimerPopup.style.display = 'flex';
+        });
+
+        // Close disclaimer popup when clicking the close button
+        document.querySelector('#disclaimer-popup .close-popup').addEventListener('click', function() {
+            document.getElementById('disclaimer-popup').style.display = 'none';
+        });
+
+        // Close disclaimer popup when clicking the "I Understand" button
+        document.querySelector('.disclaimer-btn').addEventListener('click', function() {
+            document.getElementById('disclaimer-popup').style.display = 'none';
+            // Show desktop popup after a short delay
+            setTimeout(() => {
+                document.getElementById('desktop-popup').style.display = 'flex';
+            }, 500);
+        });
+
+        // Close desktop popup when clicking the close button
+        document.querySelector('#desktop-popup .close-popup').addEventListener('click', function() {
+            document.getElementById('desktop-popup').style.display = 'none';
+        });
+
+        // Close desktop popup when clicking the "I Understand" button
+        document.querySelector('.desktop-btn').addEventListener('click', function() {
+            document.getElementById('desktop-popup').style.display = 'none';
+        });
+
+        // Close desktop popup when clicking outside
+        document.getElementById('desktop-popup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        });
+
+        // Newsletter Form Submission
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show newsletter popup
+            const newsletterPopup = document.getElementById('newsletter-popup');
+            newsletterPopup.style.display = 'flex';
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Close newsletter popup when clicking the close button
+        document.querySelector('#newsletter-popup .close-popup').addEventListener('click', function() {
+            document.getElementById('newsletter-popup').style.display = 'none';
+        });
+
+        // Close newsletter popup when clicking outside
+        document.getElementById('newsletter-popup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html> 
