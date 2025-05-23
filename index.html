@@ -501,6 +501,20 @@
         </div>
     </div>
 
+    <!-- Trash Game Introduction Popup -->
+    <div id="trash-game-popup" class="popup">
+        <div class="popup-content trash-game-popup-content">
+            <span class="close-popup">&times;</span>
+            <div class="trash-game-icon">
+                <i class="fas fa-gamepad"></i>
+            </div>
+            <h3>Let's Clean Up Together!</h3>
+            <p>There's some trash scattered around the website. Can you help us clean it up? Just drag and drop the trash items into the bin at the bottom right corner.</p>
+            <p class="game-tip">💡 Tip: Look for items like plastic bottles, paper, and cans that need to be properly disposed of.</p>
+            <button class="trash-game-btn">Start Cleaning!</button>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -538,6 +552,74 @@
     </footer>
 
     <script>
+        // Function to show popup with animation
+        function showPopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.style.display = 'flex';
+            // Trigger reflow
+            popup.offsetHeight;
+            popup.classList.add('active');
+        }
+
+        // Function to hide popup with animation
+        function hidePopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.classList.remove('active');
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 300); // Match the transition duration
+        }
+
+        // Show disclaimer popup when page loads
+        window.addEventListener('load', function() {
+            showPopup('disclaimer-popup');
+        });
+
+        // Disclaimer popup interactions
+        document.querySelector('.disclaimer-btn').addEventListener('click', function() {
+            hidePopup('disclaimer-popup');
+            setTimeout(() => {
+                showPopup('desktop-popup');
+            }, 300);
+        });
+
+        // Desktop popup interactions
+        document.querySelector('.desktop-btn').addEventListener('click', function() {
+            hidePopup('desktop-popup');
+            setTimeout(() => {
+                showPopup('trash-game-popup');
+            }, 300);
+        });
+
+        // Trash game popup interactions
+        document.querySelector('.trash-game-btn').addEventListener('click', function() {
+            hidePopup('trash-game-popup');
+        });
+
+        // Close popups when clicking close button
+        document.querySelectorAll('.close-popup').forEach(button => {
+            button.addEventListener('click', function() {
+                const popup = this.closest('.popup');
+                hidePopup(popup.id);
+            });
+        });
+
+        // Close popups when clicking outside
+        document.querySelectorAll('.popup').forEach(popup => {
+            popup.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    hidePopup(this.id);
+                }
+            });
+        });
+
+        // Newsletter form submission
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showPopup('newsletter-popup');
+            this.reset();
+        });
+
         // Join Movement Button and Form Functionality
         document.getElementById('join-button').addEventListener('click', function() {
             const signupForm = document.getElementById('signup-form');
@@ -552,32 +634,14 @@
         // Movement Form Submission
         document.getElementById('movement-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Show popup
-            const popup = document.getElementById('popup');
-            popup.style.display = 'flex';
-            
-            // Reset form and hide it
+            showPopup('popup');
             this.reset();
             document.getElementById('signup-form').style.display = 'none';
-        });
-
-        // Close popup when clicking the close button
-        document.querySelector('.close-popup').addEventListener('click', function() {
-            document.getElementById('popup').style.display = 'none';
-        });
-
-        // Close popup when clicking outside
-        document.getElementById('popup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.style.display = 'none';
-            }
         });
 
         // Trash Game Functionality
         const trashItems = document.querySelectorAll('.trash-item');
         const trashBin = document.querySelector('.trash-bin');
-        const successPopup = document.getElementById('success-popup');
         let draggedItem = null;
 
         trashItems.forEach(item => {
@@ -612,21 +676,11 @@
                     draggedItem.remove();
                     // Check if all trash is collected
                     if (document.querySelectorAll('.trash-item').length === 0) {
-                        successPopup.style.display = 'flex';
+                        setTimeout(() => {
+                            showPopup('success-popup');
+                        }, 500);
                     }
                 }, 500);
-            }
-        });
-
-        // Close success popup
-        successPopup.querySelector('.close-popup').addEventListener('click', function() {
-            successPopup.style.display = 'none';
-        });
-
-        // Close success popup when clicking outside
-        successPopup.addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.style.display = 'none';
             }
         });
 
@@ -671,67 +725,6 @@
         
         // Also randomize positions when window is resized
         window.addEventListener('resize', randomizeTrashPositions);
-
-        // Show disclaimer popup when page loads
-        window.addEventListener('load', function() {
-            const disclaimerPopup = document.getElementById('disclaimer-popup');
-            disclaimerPopup.style.display = 'flex';
-        });
-
-        // Close disclaimer popup when clicking the close button
-        document.querySelector('#disclaimer-popup .close-popup').addEventListener('click', function() {
-            document.getElementById('disclaimer-popup').style.display = 'none';
-        });
-
-        // Close disclaimer popup when clicking the "I Understand" button
-        document.querySelector('.disclaimer-btn').addEventListener('click', function() {
-            document.getElementById('disclaimer-popup').style.display = 'none';
-            // Show desktop popup after a short delay
-            setTimeout(() => {
-                document.getElementById('desktop-popup').style.display = 'flex';
-            }, 500);
-        });
-
-        // Close desktop popup when clicking the close button
-        document.querySelector('#desktop-popup .close-popup').addEventListener('click', function() {
-            document.getElementById('desktop-popup').style.display = 'none';
-        });
-
-        // Close desktop popup when clicking the "I Understand" button
-        document.querySelector('.desktop-btn').addEventListener('click', function() {
-            document.getElementById('desktop-popup').style.display = 'none';
-        });
-
-        // Close desktop popup when clicking outside
-        document.getElementById('desktop-popup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.style.display = 'none';
-            }
-        });
-
-        // Newsletter Form Submission
-        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Show newsletter popup
-            const newsletterPopup = document.getElementById('newsletter-popup');
-            newsletterPopup.style.display = 'flex';
-            
-            // Reset form
-            this.reset();
-        });
-
-        // Close newsletter popup when clicking the close button
-        document.querySelector('#newsletter-popup .close-popup').addEventListener('click', function() {
-            document.getElementById('newsletter-popup').style.display = 'none';
-        });
-
-        // Close newsletter popup when clicking outside
-        document.getElementById('newsletter-popup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.style.display = 'none';
-            }
-        });
     </script>
 </body>
 </html> 
