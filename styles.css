@@ -78,10 +78,24 @@ header {
     width: auto;
 }
 
-.logo h1 {
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.02);
+}
+
+.logo-link h1 {
     color: var(--primary-green);
     font-size: 1.8rem;
     font-weight: 700;
+    margin: 0;
 }
 
 nav ul {
