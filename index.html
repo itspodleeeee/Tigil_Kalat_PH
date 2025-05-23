@@ -43,8 +43,10 @@
     <!-- Header -->
     <header>
         <div class="logo">
-            <img src="logo/logo.png" alt="Tigil Kalat PH Logo" class="logo-img">
-            <h1>Tigil Kalat PH</h1>
+            <a href="#home" class="logo-link">
+                <img src="logo/logo.png" alt="Tigil Kalat PH Logo" class="logo-img">
+                <h1>Tigil Kalat PH</h1>
+            </a>
         </div>
         <nav>
             <ul>
@@ -725,6 +727,26 @@
         
         // Also randomize positions when window is resized
         window.addEventListener('resize', randomizeTrashPositions);
+
+        // Add smooth scrolling behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerOffset = 80; // Adjust this value based on your header height
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html> 
