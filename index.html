@@ -45,7 +45,7 @@
         <div class="logo">
             <a href="#home" class="logo-link">
                 <img src="logo/logo.png" alt="Tigil Kalat PH Logo" class="logo-img">
-                <h1>Tigil Kalat PH</h1>
+            <h1>Tigil Kalat PH</h1>
             </a>
         </div>
         <nav>
@@ -116,6 +116,42 @@
                             <p>Of Manila Bay litter is plastic</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section id="charts" class="charts">
+        <div class="container">
+            <h2>Data Insights</h2>
+            
+            <!-- Waste Generation Chart -->
+            <div class="chart-container">
+                <h3>Philippines Daily Waste Generation Trend</h3>
+                <div class="chart-wrapper">
+                    <canvas id="wasteGenerationChart"></canvas>
+                </div>
+                <div class="chart-sources">
+                    <button id="checkSourcesBtn" class="sources-btn">Check Sources</button>
+                    <div id="sourcesList" class="sources-list">
+                        <ul>
+                            <li><a href="https://psa.gov.ph/statistics/environment/peenra/node/165222" target="_blank">Philippine Statistics Authority (PSA). (2021). Compendium of Philippine Environment Statistics Component 3: Residuals</a></li>
+                            <li><a href="https://climate-transparency-platform.org/sites/default/files/2024-06/D4_Overview%20of%20waste%20sector%20and%20solid%20waste_CBIT%20GSP.pdf" target="_blank">Climate Transparency Platform. Waste Sector in Philippines</a></li>
+                            <li><a href="https://enptinio.com/statistics-philippines-solid-waste-management/" target="_blank">EnP Tinio. (2022). 15 Statistics about Solid Waste Management in the Philippines that Every Filipino should Know</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plastic Litter Chart -->
+            <div class="chart-container">
+                <h3>Top Plastic Litter Items Found (Philippines, ICC 2023)</h3>
+                <div class="chart-wrapper">
+                    <canvas id="plasticLitterChart"></canvas>
+                </div>
+                <div class="chart-sources">
+                    <p>Source: <a href="https://cids.up.edu.ph/wp-content/uploads/2024/10/Artificial-Intelligence-and-Marine-Litter-Monitoring-and-Tracking-Investing-in-AI-Technologies-in-the-Philippines.pdf" target="_blank">UP CIDS. (2024). Artificial Intelligence and Marine Litter Monitoring and Tracking - Investing in AI Technologies in the Philippines</a></p>
                 </div>
             </div>
         </div>
@@ -523,20 +559,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Sources</h3>
-                    <ul>
-                        <li><a href="https://www.philstar.com/headlines/2024/02/23/2335473/denr-philippines-still-third-largest-source-marine-litter" target="_blank">Philstar - Philippines still third largest source of marine litter</a></li>
-                        <li><a href="https://www.theguardian.com/world/2021/oct/05/photos-show-manila-bay-mangroves-choking-in-plastic-pollution" target="_blank">The Guardian - Manila Bay mangroves choking in plastic pollution</a></li>
-                        <li><a href="https://www.gettyimages.com/detail/news-photo/children-playing-on-a-beach-filled-with-plastic-wastes-on-news-photo/949631630" target="_blank">Getty Images - Children playing on plastic waste-covered beach</a></li>
-                        <li><a href="https://files01.pna.gov.ph/source/2024/02/27/manila-bay-clean-up-02262024ybl.jpg" target="_blank">Philippine News Agency - Manila Bay cleanup operations</a></li>
-                        <li><a href="https://ecowastecoalition.blogspot.com/2025/01/ecowaste-coalition-highlights.html" target="_blank">EcoWaste Coalition - Marine litter reduction progress</a></li>
-                        <li><a href="https://pcij.org/2024/05/19/has-the-philippines-created-a-garbage-problem-too-big-to-dig-its-way-out-of" target="_blank">PCIJ - Philippines garbage problem investigation</a></li>
-                        <li><a href="https://www.reuters.com/world/asia-pacific/philippine-diving-town-swaps-trash-rice-clean-up-its-beaches-2024-07-03" target="_blank">Reuters - Philippine diving town trash-for-rice program</a></li>
-                        <li><a href="https://blogs.worldbank.org/en/eastasiapacific/addressing-plastic-pollution-crisis-philippines-new-momentum" target="_blank">World Bank - Plastic pollution crisis in the Philippines</a></li>
-                        <li><a href="https://www.greenpeace.org/philippines/story/67359/fisherfolk-on-the-frontlines" target="_blank">Greenpeace - Fisherfolk on the frontlines</a></li>
-                        <li><a href="https://plasticbank.com/blog/top-5-waste-management-challenges-in-the-philippines-and-how-to-solve-them" target="_blank">Plastic Bank - Waste management challenges in the Philippines</a></li>
-                        <li><a href="https://nosy.agency/blog/tackling-plastic-pollution-in-the-philippines-a-growing-crisis" target="_blank">Nosy Agency - Tackling plastic pollution in the Philippines</a></li>
-                        <li><a href="https://www.gmanetwork.com/news/scitech/science/932956/marine-litter-in-manila-bay-has-decreased-2024-study" target="_blank">GMA News - Manila Bay marine litter decrease study</a></li>
-                    </ul>
+                    <button id="view-sources-btn" class="cta-button">View All Project Sources</button>
                 </div>
                 <div class="footer-section">
                     <h3>Connect With Us</h3>
@@ -552,6 +575,28 @@
             </div>
         </div>
     </footer>
+
+    <!-- Sources Popup Modal (moved to end of body) -->
+    <div id="sources-popup" class="popup">
+        <div class="popup-content sources-popup-content">
+            <span class="close-popup">&times;</span>
+            <h3>Project Sources & Acknowledgements</h3>
+            <ul class="sources-popup-list">
+                <li><a href="https://www.philstar.com/headlines/2024/02/23/2335473/denr-philippines-still-third-largest-source-marine-litter" target="_blank">Philstar - Philippines still third largest source of marine litter</a></li>
+                <li><a href="https://www.theguardian.com/world/2021/oct/05/photos-show-manila-bay-mangroves-choking-in-plastic-pollution" target="_blank">The Guardian - Manila Bay mangroves choking in plastic pollution</a></li>
+                <li><a href="https://www.gettyimages.com/detail/news-photo/children-playing-on-a-beach-filled-with-plastic-wastes-on-news-photo/949631630" target="_blank">Getty Images - Children playing on plastic waste-covered beach</a></li>
+                <li><a href="https://files01.pna.gov.ph/source/2024/02/27/manila-bay-clean-up-02262024ybl.jpg" target="_blank">Philippine News Agency - Manila Bay cleanup operations</a></li>
+                <li><a href="https://ecowastecoalition.blogspot.com/2025/01/ecowaste-coalition-highlights.html" target="_blank">EcoWaste Coalition - Marine litter reduction progress</a></li>
+                <li><a href="https://pcij.org/2024/05/19/has-the-philippines-created-a-garbage-problem-too-big-to-dig-its-way-out-of" target="_blank">PCIJ - Philippines garbage problem investigation</a></li>
+                <li><a href="https://www.reuters.com/world/asia-pacific/philippine-diving-town-swaps-trash-rice-clean-up-its-beaches-2024-07-03" target="_blank">Reuters - Philippine diving town trash-for-rice program</a></li>
+                <li><a href="https://blogs.worldbank.org/en/eastasiapacific/addressing-plastic-pollution-crisis-philippines-new-momentum" target="_blank">World Bank - Plastic pollution crisis in the Philippines</a></li>
+                <li><a href="https://www.greenpeace.org/philippines/story/67359/fisherfolk-on-the-frontlines" target="_blank">Greenpeace - Fisherfolk on the frontlines</a></li>
+                <li><a href="https://plasticbank.com/blog/top-5-waste-management-challenges-in-the-philippines-and-how-to-solve-them" target="_blank">Plastic Bank - Waste management challenges in the Philippines</a></li>
+                <li><a href="https://nosy.agency/blog/tackling-plastic-pollution-in-the-philippines-a-growing-crisis" target="_blank">Nosy Agency - Tackling plastic pollution in the Philippines</a></li>
+                <li><a href="https://www.gmanetwork.com/news/scitech/science/932956/marine-litter-in-manila-bay-has-decreased-2024-study" target="_blank">GMA News - Manila Bay marine litter decrease study</a></li>
+            </ul>
+        </div>
+    </div>
 
     <script>
         // Function to show popup with animation
@@ -604,6 +649,13 @@
                 const popup = this.closest('.popup');
                 hidePopup(popup.id);
             });
+            // Add touchstart listener for mobile reliability
+            button.addEventListener('touchstart', function(e) {
+                // Prevent potential touch-and-hold default actions
+                e.preventDefault();
+                const popup = this.closest('.popup');
+                hidePopup(popup.id);
+            }, { passive: false }); // Use passive: false to allow preventDefault
         });
 
         // Close popups when clicking outside
@@ -746,6 +798,241 @@
                     });
                 }
             });
+        });
+
+        // --- Mobile Navigation Toggle ---
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const nav = document.querySelector('nav');
+        mobileMenu.addEventListener('click', function() {
+            nav.classList.toggle('nav-open');
+        });
+        // Hide nav when clicking a link (mobile)
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('nav-open');
+            });
+        });
+
+        // --- Sources Popup ---
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('view-sources-btn').addEventListener('click', function() {
+                showPopup('sources-popup');
+            });
+        });
+
+        // --- Minigame Touch Support ---
+        trashItems.forEach(item => {
+            // Touch events for mobile drag
+            item.addEventListener('touchstart', function(e) {
+                draggedItem = this;
+                this.classList.add('dragging');
+                this._touchStartX = e.touches[0].clientX - this.offsetLeft;
+                this._touchStartY = e.touches[0].clientY - this.offsetTop;
+                this.style.zIndex = 2000;
+            });
+            item.addEventListener('touchmove', function(e) {
+                if (!draggedItem) return;
+                e.preventDefault();
+                let x = e.touches[0].clientX - this._touchStartX;
+                let y = e.touches[0].clientY - this._touchStartY;
+                this.style.left = x + 'px';
+                this.style.top = y + 'px';
+            }, { passive: false });
+            item.addEventListener('touchend', function(e) {
+                if (!draggedItem) return;
+                this.classList.remove('dragging');
+                this.style.zIndex = '';
+                // Check if dropped over bin
+                const binRect = trashBin.getBoundingClientRect();
+                const itemRect = this.getBoundingClientRect();
+                const overlap = !(binRect.right < itemRect.left || binRect.left > itemRect.right || binRect.bottom < itemRect.top || binRect.top > itemRect.bottom);
+                if (overlap) {
+                    // Animate to bin
+                    this.style.transition = 'all 0.5s ease';
+                    this.style.transform = `translate(${binRect.left - itemRect.left}px, ${binRect.top - itemRect.top}px) scale(0.1)`;
+                    this.style.opacity = '0';
+                    setTimeout(() => {
+                        this.remove();
+                        if (document.querySelectorAll('.trash-item').length === 0) {
+                            setTimeout(() => {
+                                showPopup('success-popup');
+                            }, 500);
+                        }
+                    }, 500);
+                } else {
+                    // Snap back if not dropped in bin
+                    this.style.transition = 'left 0.3s, top 0.3s';
+                    randomizeTrashPositions();
+                }
+                draggedItem = null;
+            });
+        });
+    </script>
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Charts Initialization -->
+    <script>
+        // Chart.js Global Configuration
+        Chart.defaults.font.family = 'Poppins, sans-serif';
+        Chart.defaults.color = '#666666';
+        Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        Chart.defaults.plugins.tooltip.padding = 10;
+        Chart.defaults.plugins.tooltip.cornerRadius = 4;
+
+        // Waste Generation Chart
+        const wasteCtx = document.getElementById('wasteGenerationChart').getContext('2d');
+        const wasteChart = new Chart(wasteCtx, {
+            type: 'bar',
+            data: {
+                labels: ['2010', '2019', '2025 (Projected)'],
+                datasets: [{
+                    label: 'Waste Generated (tons/day)',
+                    data: [48070, 57579, 64685],
+                    backgroundColor: '#2ecc71',
+                    borderColor: '#27ae60',
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    barPercentage: 0.6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.raw.toLocaleString()} tons/day`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Waste Generated (tons per day)',
+                            font: {
+                                size: 14,
+                                weight: '500'
+                            }
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return value.toLocaleString();
+                            }
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year',
+                            font: {
+                                size: 14,
+                                weight: '500'
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Plastic Litter Chart
+        const litterCtx = document.getElementById('plasticLitterChart').getContext('2d');
+        const litterChart = new Chart(litterCtx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Plastic Grocery Bags',
+                    'Food Wrappers (Plastic)',
+                    'Plastic Beverage Bottles',
+                    'Other Plastic Bags',
+                    'Plastic Cups & Plates'
+                ],
+                datasets: [{
+                    label: 'Number of Items Recovered',
+                    data: [340200, 264196, 243669, 211759, 140553],
+                    backgroundColor: [
+                        '#2ecc71',
+                        '#27ae60',
+                        '#219a52',
+                        '#1a8042',
+                        '#146633'
+                    ],
+                    borderColor: '#27ae60',
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    barPercentage: 0.6
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.raw.toLocaleString()} items`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Items Recovered',
+                            font: {
+                                size: 14,
+                                weight: '500'
+                            }
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return value.toLocaleString();
+                            }
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Litter Type',
+                            font: {
+                                size: 14,
+                                weight: '500'
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Sources Button Functionality
+        document.getElementById('checkSourcesBtn').addEventListener('click', function() {
+            const sourcesList = document.getElementById('sourcesList');
+            sourcesList.classList.toggle('active');
+            this.textContent = sourcesList.classList.contains('active') ? 'Hide Sources' : 'Check Sources';
+        });
+
+        // Handle window resize for better responsiveness
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                wasteChart.resize();
+                litterChart.resize();
+            }, 250);
         });
     </script>
 </body>
