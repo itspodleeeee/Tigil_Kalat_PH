@@ -1667,4 +1667,405 @@ footer {
         padding: 0.8rem;
         font-size: 0.9rem;
     }
+}
+
+/* Charts Section */
+.charts {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.charts h2 {
+    text-align: center;
+    color: var(--dark-green);
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.chart-container {
+    background-color: var(--gray);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+}
+
+.chart-container h3 {
+    color: var(--dark-green);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.chart-wrapper {
+    position: relative;
+    margin: 0 auto;
+    height: 400px;
+    width: 100%;
+}
+
+.chart-sources {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.sources-btn {
+    background-color: var(--primary-green);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.sources-btn:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+.sources-list {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sources-list.active {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+.sources-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sources-list li {
+    margin-bottom: 0.8rem;
+}
+
+.sources-list li:last-child {
+    margin-bottom: 0;
+}
+
+.sources-list a {
+    color: var(--dark-green);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.sources-list a:hover {
+    color: var(--primary-green);
+}
+
+.chart-sources p {
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.chart-sources a {
+    color: var(--dark-green);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.chart-sources a:hover {
+    color: var(--primary-green);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design for Charts */
+@media (max-width: 768px) {
+    .chart-container {
+        padding: 1.5rem;
+    }
+
+    .chart-wrapper {
+        height: 300px;
+    }
+
+    .chart-container h3 {
+        font-size: 1.3rem;
+    }
+
+    .sources-list {
+        padding: 0.8rem;
+    }
+
+    .sources-list a {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .chart-wrapper {
+        height: 250px;
+    }
+
+    .chart-container h3 {
+        font-size: 1.2rem;
+    }
+
+    .sources-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Responsive Navigation --- */
+@media (max-width: 900px) {
+    nav ul {
+        gap: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        z-index: 1001;
+    }
+    nav.nav-open {
+        display: block;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+    }
+    nav ul li {
+        padding: 0.7rem 2rem;
+        border-bottom: 1px solid #eee;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+@media (max-width: 480px) {
+    header {
+        padding: 0.7rem 0.7rem;
+    }
+    .logo-link h1 {
+        font-size: 1.1rem;
+    }
+}
+
+/* --- Responsive Grids --- */
+@media (max-width: 900px) {
+    .causes-grid, .effects-grid, .tips-grid, .blog-grid, .media-grid, .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+}
+@media (max-width: 768px) {
+    .causes-grid, .effects-grid, .tips-grid, .blog-grid, .media-grid, .footer-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* --- Responsive Images & Media --- */
+.media-image, .blog-image img, .media-card .media-image, .media-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.video-container iframe {
+    width: 100% !important;
+    max-width: 100%;
+    height: 220px !important;
+}
+@media (max-width: 480px) {
+    .video-container iframe {
+        height: 160px !important;
+    }
+}
+
+/* --- Responsive Text --- */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.1rem; }
+    .about h2, .causes h2, .effects h2, .get-involved h2, .blog h2, .media-impact h2 { font-size: 1.5rem; }
+    .about-text, .about-us-text { padding: 1.2rem; }
+    .stat-item h3 { font-size: 1.2rem; }
+    .stat-item p { font-size: 0.9rem; }
+}
+@media (max-width: 480px) {
+    .hero h1 { font-size: 1.2rem; }
+    .about h2, .causes h2, .effects h2, .get-involved h2, .blog h2, .media-impact h2 { font-size: 1.1rem; }
+    .about-text, .about-us-text { padding: 0.7rem; }
+}
+
+/* --- Responsive Popups --- */
+#sources-popup .popup-content,
+.sources-popup-content {
+    max-width: 700px;
+    width: 95%;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    animation: popIn 0.3s;
+    position: relative;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+#sources-popup .popup-content h3 {
+    color: var(--primary-green);
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+}
+#sources-popup .sources-popup-list {
+    list-style: disc inside;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+#sources-popup .sources-popup-list li {
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+}
+#sources-popup .sources-popup-list a {
+    color: var(--dark-green);
+    text-decoration: underline;
+    word-break: break-all;
+}
+#sources-popup .sources-popup-list a:hover {
+    color: var(--primary-green);
+}
+@media (max-width: 600px) {
+    #sources-popup .popup-content {
+        padding: 1rem 0.5rem;
+        font-size: 0.95rem;
+        max-width: 95vw;
+        width: 100%;
+    }
+    #sources-popup .sources-popup-list li {
+        font-size: 0.92rem;
+    }
+}
+
+/* Ensure close button in sources popup is interactive */
+#sources-popup .close-popup {
+    z-index: 10;
+    pointer-events: auto;
+}
+
+/* --- Responsive Trash Game --- */
+.trash-items {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1002;
+}
+.trash-item {
+    position: absolute;
+    pointer-events: auto;
+    touch-action: none;
+    min-width: 44px;
+    min-height: 44px;
+    max-width: 70px;
+    max-height: 70px;
+    font-size: 2rem;
+    background: var(--white);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+@media (max-width: 768px) {
+    .trash-item {
+        min-width: 36px;
+        min-height: 36px;
+        max-width: 50px;
+        max-height: 50px;
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 480px) {
+    .trash-item {
+        min-width: 28px;
+        min-height: 28px;
+        max-width: 38px;
+        max-height: 38px;
+        font-size: 1rem;
+    }
+}
+
+/* --- Misc Mobile Spacing --- */
+@media (max-width: 768px) {
+    .container { padding: 0 7px; }
+    section, .about, .causes, .effects, .get-involved, .blog, .media-impact { padding: 2.2rem 0; }
+    .footer-content { padding: 1.2rem 0; }
+}
+@media (max-width: 480px) {
+    .container { padding: 0 2px; }
+    section, .about, .causes, .effects, .get-involved, .blog, .media-impact { padding: 1.1rem 0; }
+    .footer-content { padding: 0.5rem 0; }
+}
+
+/* Styles for the sources list inside the popup */
+.sources-popup-list {
+    list-style: disc inside;
+    margin: 0;
+    padding: 0;
+    /* Ensure list is displayed */
+    display: block;
+}
+
+#sources-popup .sources-popup-list li {
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+}
+
+#sources-popup .sources-popup-list a {
+    color: var(--dark-green);
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+#sources-popup .sources-popup-list a:hover {
+    color: var(--primary-green);
+}
+
+@media (max-width: 600px) {
+    #sources-popup .sources-popup-list li {
+        font-size: 0.92rem;
+    }
+}
+
+/* Ensure close button in sources popup is interactive */
+#sources-popup .close-popup {
+    z-index: 10; /* Ensure it's above other content */
+    pointer-events: auto; /* Explicitly enable pointer events */
 } 
