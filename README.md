@@ -12,6 +12,7 @@ Littering may seem small, but when millions of people do it every day, it become
 
 ---
 
+
 ## 💻 Features
 
 - ✅ Clean and responsive HTML/CSS layout (no frameworks)
@@ -21,6 +22,7 @@ Littering may seem small, but when millions of people do it every day, it become
   - About Us
   - Causes
   - Effects
+  - Solutions *(New in Milestone 2)*
   - Get Involved
   - Blog with real news updates
 - ✅ Interactive elements:
@@ -28,6 +30,19 @@ Littering may seem small, but when millions of people do it every day, it become
   - Pop-up forms and hover effects
 - ✅ Embedded video and real images from the Philippines
 - ✅ Newsletter sign-up form
+
+---
+
+## 🚩 Milestone 2 Update: Solutions Section
+
+**Milestone 2 adds a new "Solutions in Action" section:**
+
+- **Solutions in Action:**
+  - Highlights real-world solutions to littering in the Philippines, including national laws (Republic Act No. 9003), local ordinances (e.g., Marikina City), and IEC campaigns.
+  - Each solution card features a description, data/statistics, and direct links to credible sources.
+  - Includes a dedicated sources button and popup for transparency and further reading.
+
+This new section aims to inspire action by showing effective policies and community efforts making a difference in waste management and anti-littering advocacy.
 
 ---
 

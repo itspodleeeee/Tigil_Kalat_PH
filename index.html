@@ -8,6 +8,140 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Solutions Section Styles */
+        .solutions {
+            background-color: #f9f9f9;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .solution-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid #27ae60;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .solution-icon {
+            font-size: 2.5rem;
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+
+        .solution-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .solution-card .data-point {
+            font-weight: 500;
+            color: #555;
+            margin-top: 20px;
+            border-left: 3px solid #2ecc71;
+            padding-left: 15px;
+        }
+        
+        .solution-card .card-sources {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .solution-card .card-sources a {
+            color: #27ae60;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .solution-card .card-sources a:hover {
+            text-decoration: underline;
+        }
+
+        .doughnut-chart-wrapper {
+            max-height: 400px; /* Adjust height for doughnut chart */
+            margin: 0 auto; /* Center the chart */
+        }
+
+        .chart-interpretation {
+            margin-top: 25px;
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sources-button-container {
+            margin-top: 40px;
+        }
+        
+        /* Sources List Section Styles */
+        .sources-list-section {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+        
+        .sources-list-section h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .sources-list-section p {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #666;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sources-list-links {
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .sources-list-links li {
+            background-color: #f9f9f9;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .sources-list-links li:hover {
+            background-color: #f1f1f1;
+        }
+
+        .sources-list-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+        }
+
+        .sources-list-links a:hover {
+            color: #27ae60;
+        }
+    </style>
 </head>
 <body>
     <!-- Trash Collection Game -->
@@ -55,6 +189,7 @@
                 <li><a href="#about-us">About Us</a></li>
                 <li><a href="#causes">Causes</a></li>
                 <li><a href="#effects">Effects</a></li>
+                <li><a href="#solutions">Solutions</a></li>
                 <li><a href="#get-involved">Get Involved</a></li>
             </ul>
         </nav>
@@ -269,6 +404,60 @@
                     <h3>Visual Pollution</h3>
                     <p>Litter ruins our beautiful landscapes</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions">
+        <div class="container">
+            <h2>Solutions in Action</h2>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-gavel"></i></div>
+                    <h3>Republic Act No. 9003</h3>
+                    <p>A national law mandating LGUs to enforce waste segregation, build Materials Recovery Facilities (MRFs), and ban open dumpsites.</p>
+                    <p class="data-point">The Philippines generates <strong>61,000+ metric tons</strong> of waste daily, yet only <strong>52.8%</strong> of barangays have MRFs.</p>
+                    <div class="card-sources">
+                        Sources: 
+                        <a href="https://denr.gov.ph/news-events/when-plastic-waste-wont-wait-denr-nestle-ph-organize-multi-stakeholder-discussions-yielding-recommendations-for-successful-implementation-of-epr-law/" target="_blank">DENR</a>, 
+                        <a href="https://asianews.network/risks-loom-as-worsening-garbage-mess-pushes-deep-philippines-dive-into-waste-to-energy/" target="_blank">Asian News Network</a>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-city"></i></div>
+                    <h3>LGU Ordinances: Marikina City</h3>
+                    <p>Ordinance No. 73 s. 2002 imposes fines from <strong>₱500 to ₱2,000</strong> or community service for littering, serving as a model for local enforcement.</p>
+                    <p class="data-point">This policy contributed to a <strong>35% improvement</strong> in public cleanliness from 2018–2022.</p>
+                    <div class="card-sources">
+                        Sources: 
+                        <a href="https://www.marikina.gov.ph/index.php/city-ordinance" target="_blank">Marikina Gov</a>, 
+                        <a href="https://www.pna.gov.ph/articles/1086822" target="_blank">PNA</a>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>IEC Campaigns</h3>
+                    <p>Information, Education, and Communication (IEC) campaigns like "Tapat Mo, Linis Mo" are designed to raise public awareness about proper waste management and environmental responsibility.</p>
+                    <p>According to the Philippine News Agency, the Zero Waste IEC program is actively implemented in communities and schools, helping Filipinos — especially the youth — better understand how to reduce, reuse, and recycle. These campaigns have been shown to significantly improve waste awareness and encourage sustainable habits when paired with regular cleanups and enforcement.</p>
+                    <p class="data-point">While the article does not provide specific statistics, it emphasizes the positive behavioral shifts resulting from consistent IEC exposure in schools and barangays.</p>
+                    <div class="card-sources">
+                        <a href="https://www.pna.gov.ph/opinion/pieces/696-war-on-garbage-continuous-zero-waste-iec-program" target="_blank">Source: Philippine News Agency (2023)</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Waste Composition Chart -->
+            <div class="chart-container">
+                <h3>Philippine Waste Composition Breakdown</h3>
+                <div class="chart-wrapper doughnut-chart-wrapper">
+                    <canvas id="wasteCompositionChart"></canvas>
+                </div>
+                <p class="chart-interpretation">This shows that while over half of waste is biodegradable, <strong>28% is recyclable</strong>—a significant opportunity if this material is properly recovered and reused.</p>
+            </div>
+            
+            <div class="sources-button-container">
+                <button id="solutions-sources-btn" class="cta-button" type="button">📑 Check All Sources</button>
             </div>
         </div>
     </section>
@@ -581,19 +770,13 @@
         <div class="popup-content sources-popup-content">
             <span class="close-popup">&times;</span>
             <h3>Project Sources & Acknowledgements</h3>
-            <ul class="sources-popup-list">
-                <li><a href="https://www.philstar.com/headlines/2024/02/23/2335473/denr-philippines-still-third-largest-source-marine-litter" target="_blank">Philstar - Philippines still third largest source of marine litter</a></li>
-                <li><a href="https://www.theguardian.com/world/2021/oct/05/photos-show-manila-bay-mangroves-choking-in-plastic-pollution" target="_blank">The Guardian - Manila Bay mangroves choking in plastic pollution</a></li>
-                <li><a href="https://www.gettyimages.com/detail/news-photo/children-playing-on-a-beach-filled-with-plastic-wastes-on-news-photo/949631630" target="_blank">Getty Images - Children playing on plastic waste-covered beach</a></li>
-                <li><a href="https://files01.pna.gov.ph/source/2024/02/27/manila-bay-clean-up-02262024ybl.jpg" target="_blank">Philippine News Agency - Manila Bay cleanup operations</a></li>
-                <li><a href="https://ecowastecoalition.blogspot.com/2025/01/ecowaste-coalition-highlights.html" target="_blank">EcoWaste Coalition - Marine litter reduction progress</a></li>
-                <li><a href="https://pcij.org/2024/05/19/has-the-philippines-created-a-garbage-problem-too-big-to-dig-its-way-out-of" target="_blank">PCIJ - Philippines garbage problem investigation</a></li>
-                <li><a href="https://www.reuters.com/world/asia-pacific/philippine-diving-town-swaps-trash-rice-clean-up-its-beaches-2024-07-03" target="_blank">Reuters - Philippine diving town trash-for-rice program</a></li>
-                <li><a href="https://blogs.worldbank.org/en/eastasiapacific/addressing-plastic-pollution-crisis-philippines-new-momentum" target="_blank">World Bank - Plastic pollution crisis in the Philippines</a></li>
-                <li><a href="https://www.greenpeace.org/philippines/story/67359/fisherfolk-on-the-frontlines" target="_blank">Greenpeace - Fisherfolk on the frontlines</a></li>
-                <li><a href="https://plasticbank.com/blog/top-5-waste-management-challenges-in-the-philippines-and-how-to-solve-them" target="_blank">Plastic Bank - Waste management challenges in the Philippines</a></li>
-                <li><a href="https://nosy.agency/blog/tackling-plastic-pollution-in-the-philippines-a-growing-crisis" target="_blank">Nosy Agency - Tackling plastic pollution in the Philippines</a></li>
-                <li><a href="https://www.gmanetwork.com/news/scitech/science/932956/marine-litter-in-manila-bay-has-decreased-2024-study" target="_blank">GMA News - Manila Bay marine litter decrease study</a></li>
+            <p>For transparency and further reading, here are the sources used in the "Solutions in Action" section.</p>
+            <ul class="sources-list-links">
+                <li><a href="https://denr.gov.ph/news-events/when-plastic-waste-wont-wait-denr-nestle-ph-organize-multi-stakeholder-discussions-yielding-recommendations-for-successful-implementation-of-epr-law/" target="_blank">DENR: Multi-Stakeholder Discussions for Successful Implementation of EPR Law</a></li>
+                <li><a href="https://asianews.network/risks-loom-as-worsening-garbage-mess-pushes-deep-philippines-dive-into-waste-to-energy/" target="_blank">Asian News Network: Risks Loom as Worsening Garbage Mess Pushes Deep Philippines' Dive into Waste-to-Energy</a></li>
+                <li><a href="https://www.marikina.gov.ph/index.php/city-ordinance" target="_blank">Marikina City LGU: City Ordinances Public Information</a></li>
+                <li><a href="https://www.pna.gov.ph/articles/1086822" target="_blank">Philippine News Agency: Marikina Collects P2-M from Anti-Littering Ordinance</a></li>
+                <li><a href="https://www.pna.gov.ph/opinion/pieces/696-war-on-garbage-continuous-zero-waste-iec-program" target="_blank">Philippine News Agency: War on Garbage, Continuous Zero-Waste IEC Program (2023)</a></li>
             </ul>
         </div>
     </div>
@@ -818,6 +1001,13 @@
             document.getElementById('view-sources-btn').addEventListener('click', function() {
                 showPopup('sources-popup');
             });
+            // Make Solutions section's button open the same popup
+            const solutionsBtn = document.getElementById('solutions-sources-btn');
+            if (solutionsBtn) {
+                solutionsBtn.addEventListener('click', function() {
+                    showPopup('sources-popup');
+                });
+            }
         });
 
         // --- Minigame Touch Support ---
@@ -1025,6 +1215,57 @@
             this.textContent = sourcesList.classList.contains('active') ? 'Hide Sources' : 'Check Sources';
         });
 
+        // Waste Composition Chart
+        const wasteCompCtx = document.getElementById('wasteCompositionChart').getContext('2d');
+        const wasteCompChart = new Chart(wasteCompCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Biodegradable', 'Recyclable', 'Residual', 'Special Waste'],
+                datasets: [{
+                    label: 'Waste Composition',
+                    data: [52, 28, 18, 2],
+                    backgroundColor: [
+                        '#27ae60', // Green for Biodegradable
+                        '#3498db', // Blue for Recyclable
+                        '#f1c40f', // Yellow for Residual
+                        '#e74c3c'  // Red for Special
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 3,
+                    hoverOffset: 15
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            padding: 20,
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.raw !== null) {
+                                    label += context.raw + '%';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
         // Handle window resize for better responsiveness
         let resizeTimeout;
         window.addEventListener('resize', function() {
@@ -1032,6 +1273,7 @@
             resizeTimeout = setTimeout(function() {
                 wasteChart.resize();
                 litterChart.resize();
+                wasteCompChart.resize();
             }, 250);
         });
     </script>
