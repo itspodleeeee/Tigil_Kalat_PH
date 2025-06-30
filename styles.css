@@ -1899,16 +1899,6 @@ footer {
     height: auto;
     display: block;
 }
-.video-container iframe {
-    width: 100% !important;
-    max-width: 100%;
-    height: 220px !important;
-}
-@media (max-width: 480px) {
-    .video-container iframe {
-        height: 160px !important;
-    }
-}
 
 /* --- Responsive Text --- */
 @media (max-width: 768px) {
