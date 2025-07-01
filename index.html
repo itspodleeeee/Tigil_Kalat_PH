@@ -15,6 +15,7 @@
             padding: 80px 0;
             text-align: center;
         }
+
         .solutions h2 {
             text-align: center;
             color: var(--dark-green);
@@ -147,6 +148,29 @@
         .sources-list-links a:hover {
             color: #27ae60;
         }
+
+        /* New Label Styles */
+        .nav-new-label {
+            background-color: #e74c3c;
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding: 1px 4px;
+            border-radius: 8px;
+            margin-left: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            animation: pulse 2s infinite;
+            position: relative;
+            top: -8px;
+            display: inline-block;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
     </style>
 </head>
 <body>
@@ -195,7 +219,7 @@
                 <li><a href="#about-us">About Us</a></li>
                 <li><a href="#causes">Causes</a></li>
                 <li><a href="#effects">Effects</a></li>
-                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#solutions">Solutions<span class="nav-new-label">New</span></a></li>
                 <li><a href="#get-involved">Get Involved</a></li>
             </ul>
         </nav>
@@ -464,6 +488,20 @@
             
             <div class="sources-button-container">
                 <button id="solutions-sources-btn" class="cta-button" type="button">📑 Check All Sources</button>
+            </div>
+            <!-- Solutions in Action Sources Popup Modal -->
+            <div id="solutions-sources-popup" class="popup">
+                <div class="popup-content sources-popup-content">
+                    <span class="close-popup">&times;</span>
+                    <h3>Solutions in Action Sources</h3>
+                    <ul class="sources-list-links">
+                        <li><a href="https://denr.gov.ph/news-events/when-plastic-waste-wont-wait-denr-nestle-ph-organize-multi-stakeholder-discussions-yielding-recommendations-for-successful-implementation-of-epr-law/" target="_blank">DENR: Multi-Stakeholder Discussions for Successful Implementation of EPR Law</a></li>
+                        <li><a href="https://asianews.network/risks-loom-as-worsening-garbage-mess-pushes-deep-philippines-dive-into-waste-to-energy/" target="_blank">Asian News Network: Risks Loom as Worsening Garbage Mess Pushes Deep Philippines' Dive into Waste-to-Energy</a></li>
+                        <li><a href="https://www.marikina.gov.ph/index.php/city-ordinance" target="_blank">Marikina City LGU: City Ordinances Public Information</a></li>
+                        <li><a href="https://www.pna.gov.ph/articles/1086822" target="_blank">Philippine News Agency: Marikina Collects P2-M from Anti-Littering Ordinance</a></li>
+                        <li><a href="https://www.pna.gov.ph/opinion/pieces/696-war-on-garbage-continuous-zero-waste-iec-program" target="_blank">Philippine News Agency: War on Garbage, Continuous Zero-Waste IEC Program (2023)</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -776,13 +814,20 @@
         <div class="popup-content sources-popup-content">
             <span class="close-popup">&times;</span>
             <h3>Project Sources & Acknowledgements</h3>
-            <p>For transparency and further reading, here are the sources used in the "Solutions in Action" section.</p>
-            <ul class="sources-list-links">
-                <li><a href="https://denr.gov.ph/news-events/when-plastic-waste-wont-wait-denr-nestle-ph-organize-multi-stakeholder-discussions-yielding-recommendations-for-successful-implementation-of-epr-law/" target="_blank">DENR: Multi-Stakeholder Discussions for Successful Implementation of EPR Law</a></li>
-                <li><a href="https://asianews.network/risks-loom-as-worsening-garbage-mess-pushes-deep-philippines-dive-into-waste-to-energy/" target="_blank">Asian News Network: Risks Loom as Worsening Garbage Mess Pushes Deep Philippines' Dive into Waste-to-Energy</a></li>
-                <li><a href="https://www.marikina.gov.ph/index.php/city-ordinance" target="_blank">Marikina City LGU: City Ordinances Public Information</a></li>
-                <li><a href="https://www.pna.gov.ph/articles/1086822" target="_blank">Philippine News Agency: Marikina Collects P2-M from Anti-Littering Ordinance</a></li>
-                <li><a href="https://www.pna.gov.ph/opinion/pieces/696-war-on-garbage-continuous-zero-waste-iec-program" target="_blank">Philippine News Agency: War on Garbage, Continuous Zero-Waste IEC Program (2023)</a></li>
+            <p>For transparency and further reading, here are the sources used in this project.</p>
+            <ul class="sources-popup-list">
+                <li><a href="https://www.philstar.com/headlines/2024/02/23/2335473/denr-philippines-still-third-largest-source-marine-litter" target="_blank">Philstar - Philippines still third largest source of marine litter</a></li>
+                <li><a href="https://www.theguardian.com/world/2021/oct/05/photos-show-manila-bay-mangroves-choking-in-plastic-pollution" target="_blank">The Guardian - Manila Bay mangroves choking in plastic pollution</a></li>
+                <li><a href="https://www.gettyimages.com/detail/news-photo/children-playing-on-a-beach-filled-with-plastic-wastes-on-news-photo/949631630" target="_blank">Getty Images - Children playing on plastic waste-covered beach</a></li>
+                <li><a href="https://files01.pna.gov.ph/source/2024/02/27/manila-bay-clean-up-02262024ybl.jpg" target="_blank">Philippine News Agency - Manila Bay cleanup operations</a></li>
+                <li><a href="https://ecowastecoalition.blogspot.com/2025/01/ecowaste-coalition-highlights.html" target="_blank">EcoWaste Coalition - Marine litter reduction progress</a></li>
+                <li><a href="https://pcij.org/2024/05/19/has-the-philippines-created-a-garbage-problem-too-big-to-dig-its-way-out-of" target="_blank">PCIJ - Philippines garbage problem investigation</a></li>
+                <li><a href="https://www.reuters.com/world/asia-pacific/philippine-diving-town-swaps-trash-rice-clean-up-its-beaches-2024-07-03" target="_blank">Reuters - Philippine diving town trash-for-rice program</a></li>
+                <li><a href="https://blogs.worldbank.org/en/eastasiapacific/addressing-plastic-pollution-crisis-philippines-new-momentum" target="_blank">World Bank - Plastic pollution crisis in the Philippines</a></li>
+                <li><a href="https://www.greenpeace.org/philippines/story/67359/fisherfolk-on-the-frontlines" target="_blank">Greenpeace - Fisherfolk on the frontlines</a></li>
+                <li><a href="https://plasticbank.com/blog/top-5-waste-management-challenges-in-the-philippines-and-how-to-solve-them" target="_blank">Plastic Bank - Waste management challenges in the Philippines</a></li>
+                <li><a href="https://nosy.agency/blog/tackling-plastic-pollution-in-the-philippines-a-growing-crisis" target="_blank">Nosy Agency - Tackling plastic pollution in the Philippines</a></li>
+                <li><a href="https://www.gmanetwork.com/news/scitech/science/932956/marine-litter-in-manila-bay-has-decreased-2024-study" target="_blank">GMA News - Manila Bay marine litter decrease study</a></li>
             </ul>
         </div>
     </div>
@@ -1007,13 +1052,6 @@
             document.getElementById('view-sources-btn').addEventListener('click', function() {
                 showPopup('sources-popup');
             });
-            // Make Solutions section's button open the same popup
-            const solutionsBtn = document.getElementById('solutions-sources-btn');
-            if (solutionsBtn) {
-                solutionsBtn.addEventListener('click', function() {
-                    showPopup('sources-popup');
-                });
-            }
         });
 
         // --- Minigame Touch Support ---
@@ -1061,6 +1099,13 @@
                     randomizeTrashPositions();
                 }
                 draggedItem = null;
+            });
+        });
+
+        // --- Solutions Section Sources Popup ---
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('solutions-sources-btn').addEventListener('click', function() {
+                showPopup('solutions-sources-popup');
             });
         });
     </script>
