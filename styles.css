@@ -2059,3 +2059,166 @@ footer {
     z-index: 10; /* Ensure it's above other content */
     pointer-events: auto; /* Explicitly enable pointer events */
 } 
+
+/* --- Custom Sections for What Now, Local Action, Reflection, PH Waste Visual --- */
+.custom-section {
+    background: var(--gray);
+    color: var(--text-gray);
+    padding: 5rem 0;
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.custom-section h2 {
+    color: var(--dark-green);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+.custom-section .custom-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+    max-width: 900px;
+    margin: 0 auto;
+}
+.custom-section p, .custom-section ul, .custom-section blockquote, .custom-section .video-caption, .custom-section .infographic-caption {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+}
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 2rem auto 2.5rem auto;
+    max-width: 500px;
+}
+.custom-list li {
+    background: var(--gray);
+    border-left: 5px solid var(--primary-green);
+    padding: 0.9em 1.2em;
+    margin-bottom: 1em;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+}
+.green-quote {
+    border-left: 6px solid var(--dark-green);
+    background: var(--light-green);
+    color: var(--dark-green);
+    font-size: 1.15rem;
+    font-style: italic;
+    padding: 1.1em 1.5em;
+    margin: 2.5rem auto 0 auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(39, 174, 96, 0.07);
+}
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    margin: 2.2rem auto 1.1rem auto;
+    max-width: 700px;
+}
+.video-responsive iframe {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    border: none;
+}
+.video-caption {
+    text-align: center;
+    color: var(--dark-green);
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+.infographic-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem 0 1.2rem 0;
+}
+.responsive-infographic {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(39, 174, 96, 0.09);
+    background: #fff;
+}
+.infographic-caption {
+    text-align: center;
+    color: var(--dark-green);
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+@media (max-width: 700px) {
+    .custom-section {
+        padding: 2.2rem 0;
+    }
+    .custom-section h2 {
+        font-size: 1.4rem;
+    }
+    .green-quote {
+        font-size: 1rem;
+        padding: 0.8em 1em;
+    }
+    .video-responsive {
+        max-width: 100%;
+    }
+    .infographic-wrapper {
+        margin: 1.2rem 0 0.7rem 0;
+    }
+} 
+
+/* Waste Dashboard Section */
+.waste-dashboard-section {
+    margin-top: 60px;
+}
+.waste-dashboard-section .custom-card {
+    background: var(--white);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 15px;
+    padding: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.waste-dashboard-section iframe {
+    width: 100%;
+    min-height: 400px;
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 2rem 0 1.5rem 0;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(39, 174, 96, 0.07);
+}
+.waste-dashboard-section .caption {
+    color: var(--dark-green);
+    font-size: 1.05rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+@media (max-width: 900px) {
+    .waste-dashboard-section .custom-card {
+        padding: 1.2rem;
+    }
+    .waste-dashboard-section iframe {
+        min-height: 300px;
+    }
+}
+/* Fade-in animation for dashboard */
+.waste-dashboard-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+}
+.waste-dashboard-section.visible {
+    opacity: 1;
+    transform: none;
+} 

@@ -219,7 +219,9 @@
                 <li><a href="#about-us">About Us</a></li>
                 <li><a href="#causes">Causes</a></li>
                 <li><a href="#effects">Effects</a></li>
-                <li><a href="#solutions">Solutions<span class="nav-new-label">New</span></a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#what-now">What Now?<span class="nav-new-label">New</span></a></li>
+                <li><a href="#waste-dashboard">Waste Dashboard<span class="nav-new-label">New</span></a></li>
                 <li><a href="#get-involved">Get Involved</a></li>
             </ul>
         </nav>
@@ -519,6 +521,82 @@
         </div>
     </section>
 
+    <!-- What Now? Section -->
+    <section id="what-now" class="custom-section what-now-section">
+        <div class="container">
+            <div class="custom-card">
+                <h2>What Now?</h2>
+                <p>Ready to make a difference? Here are simple, effective ways you can take action on the waste problem in your community and daily life:</p>
+                <ul class="custom-list">
+                    <li>🚯 Refuse single-use plastics</li>
+                    <li>♻️ Segregate household waste</li>
+                    <li>🧹 Join or organize community cleanups</li>
+                    <li>📜 Support RA 9003 and other local ordinances</li>
+                    <li>📤 Share this page to raise awareness</li>
+                </ul>
+                <blockquote class="green-quote">“Small acts, when multiplied by millions, can transform the world.”</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- How You Can Start Cleaning Locally Section -->
+    <section id="local-action" class="custom-section local-action-section">
+        <div class="container">
+            <div class="custom-card">
+                <h2>How You Can Start Cleaning Locally</h2>
+                <p>Anyone can help clean up their barangay, school, or neighborhood! Gather friends, follow safety tips, and make a real impact—one cleanup at a time.</p>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/XLTSC6-781Q" title="How to Safely Clean Up Litter" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-caption">
+                    “How to Safely Clean Up Litter” – <a href="https://www.youtube.com/watch?v=XLTSC6-781Q" target="_blank">Watch on YouTube</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why We Built Tigil Kalat PH Section -->
+    <section id="reflection" class="custom-section reflection-section">
+        <div class="container">
+            <div class="custom-card">
+                <h2>Why We Built Tigil Kalat PH</h2>
+                <p>
+                    I created this page to inform and empower—after learning that the Philippines produces about 
+                    <strong>2.7 million tons of plastic waste annually</strong> and, alarmingly, only around 
+                    <strong>52.8% of barangays have functional MRFs</strong>.
+                    <a href="https://www.pna.gov.ph/articles/1223184" target="_blank">Source: DENR via PNA (2024)</a>,
+                    <a href="https://asianews.network/risks-loom-as-worsening-garbage-mess-pushes-deep-philippines-dive-into-waste-to-energy/" target="_blank">AsiaNews / NSWMC (2023)</a>.
+                </p>
+                <p>
+                    These statistics show the scale and gaps in our waste system—and serve as the reason why this page exists: to present reliable data, highlight the solutions that already work, and invite everyone to join the effort for a cleaner, healthier future.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Waste Dashboard Section -->
+    <section id="waste-dashboard" class="custom-section waste-dashboard-section">
+        <div class="container">
+            <div class="custom-card">
+                <h2>Interactive Waste Dashboard</h2>
+                <p>
+                    Explore updated solid waste management data in the Philippines through this interactive dashboard. Use filters to understand how waste is generated, collected, and processed across regions and sectors.
+                </p>
+                <iframe 
+                    title="Philippine Solid Waste Dashboard" 
+                    width="100%" 
+                    height="600px" 
+                    src="https://app.powerbi.com/view?r=eyJrIjoiMDhiZmU4YzktNzk3Mi00ODIwLWFkNGQtNDIzMWZhNWNiNWNiIiwidCI6ImY2ZjRhNjkyLTQzYjMtNDMzYi05MmIyLTY1YzRlNmNjZDkyMCIsImMiOjEwfQ%3D%3D" 
+                    frameborder="0" 
+                    allowfullscreen="true">
+                </iframe>
+                <p class="caption" style="text-align:center; margin-top:1.5rem; color:var(--dark-green);">
+                    Source: <a href="https://app.powerbi.com/view?r=eyJrIjoiMDhiZmU4YzktNzk3Mi00ODIwLWFkNGQtNDIzMWZhNWNiNWNiIiwidCI6ImY2ZjRhNjkyLTQzYjMtNDMzYi05MmIyLTY1YzRlNmNjZDkyMCIsImMiOjEwfQ%3D%3D" target="_blank">
+                    Philippine Solid Waste Dashboard</a> via Power BI (2023)
+                </p>
+            </div>
+        </div>
+    </section>
     <!-- Get Involved Section -->
     <section id="get-involved" class="get-involved">
         <div class="container">
@@ -1339,6 +1417,24 @@
                 litterChart.resize();
                 wasteCompChart.resize();
             }, 250);
+        });
+    </script>
+
+    <!-- --- Waste Dashboard Fade-in Animation --- -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dashboardSection = document.querySelector('.waste-dashboard-section');
+            if (dashboardSection) {
+                function onScrollFadeIn() {
+                    const rect = dashboardSection.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 80) {
+                        dashboardSection.classList.add('visible');
+                        window.removeEventListener('scroll', onScrollFadeIn);
+                    }
+                }
+                window.addEventListener('scroll', onScrollFadeIn);
+                onScrollFadeIn(); // Initial check
+            }
         });
     </script>
 </body>
